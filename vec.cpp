@@ -6,10 +6,10 @@ int main() {
 	int len = 5;
 	//int mat[5][5]; statische reservierung
 
-	int*mat=malloc(sizeof(int)*len)
+	int**mat=malloc(sizeof(int)*len)
 
 	for (i = 0; i < len; i++) {
-		*mat[i] = malloc(len * sizeof(int));
+		mat[i] = malloc(len * sizeof(int));
 
 
 	}
@@ -17,9 +17,12 @@ int main() {
 
 	printf("Values of vec \n")
 
-		for (int i = 0; i < len; i++) {
-			for(int j = 0; j <len; j++)
-			printf("value %d  %d\n", i, j,mat[i][j]);
+		for (int j = 0; j < len; j++) { //Zeilen
+			for (int i = 0; i < len; i++) { //Spalten
+				printf(" %d ", 
+					mat[i][j]);
+			}
+			printf("\n"); //Zeilenumbruch
 		}
 
 
