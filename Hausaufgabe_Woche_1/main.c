@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include"Header.h"
 
-//Sonja Mühleisen 
+//Sonja Mï¿½hleisen 
 double z = 0;
 double y = 0;
 double x = 100;
@@ -11,7 +11,7 @@ int main() {
 
     
     
-    //Speicherplatz für Array
+    //Speicherplatz fï¿½r Array
     double** a = malloc(2 * sizeof(double)); //Reihe
     if (NULL == a) {
         printf("Speicher reicht nicht!\n");
@@ -29,8 +29,8 @@ int main() {
     //Variablen definieren
     double g = 0.00000001; //Genauikeit einstellen
     double f = -0.0000001;
-    int i = 0;
-    int k = 0;
+    int i = 0; // this is unused
+    int k = 0; // this is unused
 
 
     //Berechnung
@@ -49,9 +49,18 @@ int main() {
         
         printf("x=%.8f    y=%.8f\n ", x,y);
 
-    } while (y > g | y< f);
+    } while (y > g | y< f); // consider "||" as locical or in c
        
        
     
 
 }
+
+
+/*
+JW-2020-05-12:
+--------------
+> nice implementation! (9/10) 
+> please same name for c-lib and h-lib file next time :-)
+> missing abort criteria max iterations: -1P
+*/
