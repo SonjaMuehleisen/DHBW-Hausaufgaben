@@ -5,7 +5,7 @@
 
 
 /* Cedrik Holzwarth 
-   Sonja Mühleisen
+   Sonja Mï¿½hleisen
    15.05.2020
    file name: mainkomplexe
    Hausaufgabe Woche 2
@@ -41,7 +41,7 @@ int main() {
 	scanf("%lf", &zahl2.imag);*/
 
 	printf("geben sie die erste komplexe Zahl im Format: a+bi ein\n");
-	scanf("%s", &zahl1.numb1);
+	scanf("%s", &zahl1.numb1); // JW-2020-06-19: this is technically wrong but handled by the compiler. one needs >zahl.numb1< or >&zahl.numb1[0]<: -1Pkt
 	printf("geben sie die zweite komplexe Zahl im Format: a+bi ein\n");
 	scanf("%s", &zahl2.numb1);
 
@@ -173,4 +173,12 @@ int main() {
 	return 0;
 	
 }
-
+/*
+JW-2020-06-19:
+--------------
+> very nice implementation! (10/10) 
+> check the scanf statements: -1Pkt
+> if user enters a number > 4 as operation the else statement will be executed. there is no catch so the programm ends with imag = 0, real = 0: -1Pkt
+> bonus well done: +2Pkt
+> nice use of the string lib as well as pointers to functions :-) 
+*/
