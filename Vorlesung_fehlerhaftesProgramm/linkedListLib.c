@@ -3,9 +3,9 @@
 #include "linkedListLib.h"
 
 void addListElem(listElement* start) {
-	listELement* new;
-	new = (listELement*)malloc(sizeof(listElement)); //neues listenelement anlegen bzw speicherreservieren
-	if (new == Null) {
+	listELement* new; // JW: typo: use listElement (no capital l)
+	new = (listELement*)malloc(sizeof(listElement)); //neues listenelement anlegen bzw speicherreservieren // JW: same typo in cast here 
+	if (new == Null) { // JW: typo: please use NULL instead of Null
 		printf("cant reserve storage.\n");
 		return;
 	}
@@ -21,15 +21,15 @@ void addListElem(listElement* start) {
 
 	//enter data
 	printf("First name:  \n");
-	scanf("%s", new->firstname);
+	scanf("%s", new->firstname); //JW: typo: use cap N
 	printf("Last name:  \n");
-	scanf("%s", new->lastname);
+	scanf("%s", new->lastname); //JW: typo: use cap N
 	printf("age:  \n");
-	scanf("%d", &(new->age)); //in diesem fall & da beim int im gegensatz zum char direkt auf den wert zugegriffen wird und nicht auf die adresse, zum speichern wird jedoch adresse benötigt
+	scanf("%d", &(new->age)); //in diesem fall & da beim int im gegensatz zum char direkt auf den wert zugegriffen wird und nicht auf die adresse, zum speichern wird jedoch adresse benï¿½tigt
 
 
 
-	void printList(listElement * start) {
+	void printList(listElement * start) { // JW: this function is defined within the addListElem function 
 
 		if (start->nextElem == NULL) printf("\nlist is empty.\n");
 		else {
@@ -42,7 +42,7 @@ void addListElem(listElement* start) {
 				printf("\tFirst name: %s\n", currElem->firstName);
 				printf("\tLast name: %s\n", currElem->lastName);
 				printf("\tFirst name: %d\n", currElem->age); //*currElem.age ander schreibweise, geh zum pointerinhalt an die stelle age
-			} while (currElem->nextElem != NULL)
+			} while (currElem->nextElem != NULL) // JW: missing semicolon ; here
 
 				printf("\n");
 

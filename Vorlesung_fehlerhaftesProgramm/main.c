@@ -14,7 +14,7 @@ int main() {
 		return -1;
 	}
 
-	start->nextElem = NULL; //geht in start an die stelle nextElem und lässt diesen Pointer auf NULL zeigen
+	start->nextElem = NULL; //geht in start an die stelle nextElem und lï¿½sst diesen Pointer auf NULL zeigen
 	int FLAGG = 1;
 	while (FLAGG) {
 
@@ -31,8 +31,8 @@ int main() {
 	}
 	switch (FLAGG)
 	{
-	case 1:printList(start); break;
-	case 2:addListElem(start); break;
+	case 1: printList(start); break;
+	case 2: addListElem(start); break;
 
 	//restliche Funktionen
 
