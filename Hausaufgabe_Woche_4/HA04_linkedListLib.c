@@ -3,7 +3,7 @@
 #include <string.h>
 #include "listBib.h"
 
-//Sonja Mühleisen 
+//Sonja Mï¿½hleisen 
 //Cedrik Holzwarth
 //29-05-2020
 //File Name:    HA03_main.c
@@ -363,6 +363,12 @@ void stringToLower(char *string) {
 /*why did you print numbers in stringtoLower-FCN. Is there a need to do that. We // it out
 we needed about 3h for this. But we did somthing unnecessary because we did not see that this part was already implemented
 */
-
+/*
+JW-2020-05-29:
+--------------
+> well done (10/10) 
+> thx for the feedback. no i really dont know why there are two printf statements in the stringToLower-fcn.
+> I think there was a reason when i implemented the fcn but cant remember now :O
+*/
 
 
