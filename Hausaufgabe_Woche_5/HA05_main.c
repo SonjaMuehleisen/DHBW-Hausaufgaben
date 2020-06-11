@@ -24,7 +24,7 @@
 
 
 
-Homework of Sonja Mühleisen and Cedrik HOlzwarth
+Homework of Sonja Mï¿½hleisen and Cedrik HOlzwarth
 Comment in line 82
 *
 **/
@@ -90,3 +90,23 @@ int main(){
     
 return 0;
 }
+/*
+JW-2020-06-11:
+--------------
+> ok (1/10) !
+> you guys already passed :-)
+> solution:
+
+main.c:
+  for(int i = 0; i < simTime/h; i++){   //simtime/h == max. Schrittanzahl
+            fprintf(fp,"%lf %lf %lf\n",(h*i),y[0],y[1]);
+            RHS_MSD(rhs,y);
+            y[0]= y[0]+rhs[0]*h;
+            y[1]= y[1]+rhs[1]*h;    
+    }
+
+rhsLib.c:
+     v_dot=-((d/m)*v+(c/m)*x);
+     x_dot=v;
+
+*/
